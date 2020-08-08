@@ -15,4 +15,10 @@ public interface DiscussPostMapper {
     // 需要用到动态SQL时，并且方法有且只有一个参数，并且在<if>中使用，那就必须取别名
     int selectDiscussPostRows(@Param("userId") int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    int updateCommentCount(int id, int commentCount);
+
 }
